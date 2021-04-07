@@ -21,6 +21,8 @@ Using python/selenium, I scrape the site.
 Using python on Jupyter Notebook, I clean the data.
 ### WIP
 - Making the code into module(.py)
+- Here we just pick up the same product name as the matching clothes.
+However, there's a matching clothes with different names. We are going to use some method (regex and NLP?) to find the matching clothes.
 
 ## Publish :compass:
 Copy and paste the data cleaned to the wix blog.
