@@ -1,5 +1,9 @@
-# matching_clothes
+# :womans_hat: matching_clothes Project :octocat:
 Making matching clothes finder 
+Since I am a mom of 2 girls, I really like to buy them matching clothes.
+In the matching clothes, they became much more adorable.
+However, it is very difficult to find the matching clothes on the site.
+This is why I'm doing this project!
 
 # Site
 is now at Wix blog. The link is [here](https://xo20e9.wixsite.com/website).
