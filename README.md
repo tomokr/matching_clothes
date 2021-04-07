@@ -10,7 +10,7 @@ is now at Wix blog. The link is [here](https://xo20e9.wixsite.com/website).
 
 # What I'm doing
 ## Scraping the site :hammer_and_pick:	
-Using python/selenium, I scrape the site.
+Using python/selenium, I scrape the site. The code is [here](https://github.com/tomokr/matching_clothes/blob/main/target.py)
 
 ### WIP
 - now only doing one site. I'd like to try the other site.
