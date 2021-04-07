@@ -10,7 +10,7 @@ is now at Wix blog. The link is [here](https://xo20e9.wixsite.com/website).
 
 # What I'm doing
 ## Scraping the site :hammer_and_pick:	
-Using python/selenium, I scrape the site. The code is [here](https://github.com/tomokr/matching_clothes/blob/main/target.py)
+Using python/selenium, I scrape the site. The code is [here](https://github.com/tomokr/matching_clothes/blob/main/target.py).
 
 ### WIP
 - now only doing one site. I'd like to try the other site.
@@ -18,14 +18,14 @@ Using python/selenium, I scrape the site. The code is [here](https://github.com/
 - scraping the image url as well
 
 ## Cleaning the data :broom:
-Using python on Jupyter Notebook, I clean the data.
+Using python on Jupyter Notebook, I clean the data. The notebook is [here](https://github.com/tomokr/matching_clothes/blob/main/Matching_clothes_Target.ipynb).
 ### WIP
 - Making the code into module(.py)
 - Here we just pick up the same product name as the matching clothes.
 However, there's a matching clothes with different names. We are going to use some method (regex and NLP?) to find the matching clothes.
 
 ## Publish :compass:
-Copy and paste the data cleaned to the wix blog.
+Copy and paste the data cleaned to [the wix blog](https://xo20e9.wixsite.com/website).
 ### WIP
 - Automated publication
 - Web app
