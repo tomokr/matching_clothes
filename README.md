@@ -6,7 +6,7 @@ However, it is very difficult to find the matching clothes on the site.
 This is why I'm doing this project!
 
 # Site :desktop_computer:
-is now at GitHub pages. The link is [here](https://tomokr.github.io/matching_clothes/)
+is now at GitHub pages:octocat:. The link is [here](https://tomokr.github.io/matching_clothes/)
 
 # What I'm doing
 ## Scraping the site :hammer_and_pick:	
@@ -25,7 +25,7 @@ Using python on Jupyter Notebook, I clean the data. The notebook is [here](https
 However, there's a matching clothes with different names. We are going to use some method (regex and NLP?) to find the matching clothes.
 
 ## Publish :compass:
-Publishing GitHub pages. The link is [here](https://tomokr.github.io/matching_clothes/)
+:octocat:Publishing GitHub pages. The link is [here](https://tomokr.github.io/matching_clothes/)
 ### WIP
 - Automated publication
 - Web app
