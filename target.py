@@ -35,58 +35,16 @@ soup_carters = BeautifulSoup(page, "html.parser")
 
 # baby
 
-# a_carters_6_9m_list = []
-# while len(a_carters_6_9m_list) == 0:
-# 	a_carters_6_9m_list = soup_carters.find_all("a", text="6-9 months")
-# 	sleep(1)
-# link_carters_6_9m = a_carters_6_9m_list[0].get('href')
-# driver.get(URL+link_carters_6_9m)
-# sleep(3)
-
-# product_names=[]
-# i = len(product_names)
-
-# num = 0
-# while num < 10:
-# 	sleep(1)
-# 	driver.execute_script("window.scrollTo(0, 1080*"+str(num)+")")
-# 	num = num + 1
-# page = driver.page_source
-# soup = BeautifulSoup(page, "html.parser")
-# product_names = soup.select('a[data-test=product-title]')
-# result_num_txt = soup.select('p[data-test=numberOfSearchResults]')[0].get_text()
-# result_num = result_num_txt.split()[0]
-
-# for j in range(int(result_num)//24+1):
-# 	print('j='+str(j))
-# 	_product_names = soup.select('a[data-test=product-title]')
-# 	product_names.extend(_product_names)
-# 	print(len(_product_names))
-# 	driver.get(URL+link_carters_6_9m+"?Nao="+str(24*(j+1)))
-# 	num = 0
-# 	while num < 10:
-# 		sleep(1)
-# 		driver.execute_script("window.scrollTo(0, 1080*"+str(num)+")")
-# 		num = num + 1
-# 	sleep(2)
-# 	page = driver.page_source
-# 	soup = BeautifulSoup(page, "html.parser")
-
-# with open('result_babies_6-9m.txt', 'w') as f:
-#     for item in product_names:
-#         f.write("%s\n" % item)
-# f.close()
-
-# toddler girl
-a_carters_5t_list = []
-while len(a_carters_5t_list) == 0:
-	a_carters_5t_list = soup_carters.find_all("a", text="5t")
+a_carters_12_18m_list = []
+while len(a_carters_12_18m_list) == 0:
+	a_carters_12_18m_list = soup_carters.find_all("a", text="12-18 Months")
 	sleep(1)
-link_carters_5t = a_carters_5t_list[0].get('href')
-driver.get(URL+link_carters_5t)
+link_carters_12_18m = a_carters_12_18m_list[0].get('href')
+driver.get(URL+link_carters_12_18m)
 sleep(3)
 
 product_names=[]
+i = len(product_names)
 
 num = 0
 while num < 10:
@@ -96,15 +54,19 @@ while num < 10:
 page = driver.page_source
 soup = BeautifulSoup(page, "html.parser")
 product_names = soup.select('a[data-test=product-title]')
-result_num_txt = soup.select('p[data-test=numberOfSearchResults]')[0].get_text()
+result_num_txt = soup.select('h2[data-test=resultsHeading]')[0].get_text()
+# タグが出力するとかわっていた
+print(result_num_txt)
 result_num = result_num_txt.split()[0]
+print(result_num)
 
 for j in range(int(result_num)//24+1):
 	print('j='+str(j))
 	_product_names = soup.select('a[data-test=product-title]')
-	product_names.extend(_product_names)
+	if j != 0:
+		product_names.extend(_product_names)
 	print(len(_product_names))
-	driver.get(URL+link_carters_5t+"?Nao="+str(24*(j+1)))
+	driver.get(URL+link_carters_12_18m+"?Nao="+str(24*(j+1)))
 	num = 0
 	while num < 10:
 		sleep(1)
@@ -114,7 +76,50 @@ for j in range(int(result_num)//24+1):
 	page = driver.page_source
 	soup = BeautifulSoup(page, "html.parser")
 
-with open('result_5t.txt', 'w') as f:
+with open('result_babies_12-18m.txt', 'w') as f:
     for item in product_names:
         f.write("%s\n" % item)
 f.close()
+
+# toddler girl
+# a_carters_5t_list = []
+# while len(a_carters_5t_list) == 0:
+# 	a_carters_5t_list = soup_carters.find_all("a", text="5T")
+# 	sleep(1)
+# link_carters_5t = a_carters_5t_list[0].get('href')
+# driver.get(URL+link_carters_5t)
+# sleep(3)
+
+# product_names=[]
+
+# num = 0
+# while num < 10:
+# 	sleep(1)
+# 	driver.execute_script("window.scrollTo(0, 1080*"+str(num)+")")
+# 	num = num + 1
+# page = driver.page_source
+# soup = BeautifulSoup(page, "html.parser")
+# product_names = soup.select('a[data-test=product-title]')
+# result_num_txt = soup.select('h2[data-test=resultsHeading]')[0].get_text()
+# result_num = result_num_txt.split()[0]
+
+# for j in range(int(result_num)//24+1):
+# 	print('j='+str(j))
+# 	_product_names = soup.select('a[data-test=product-title]')
+# 	if j != 0:
+# 		product_names.extend(_product_names)
+# 	print(len(_product_names))
+# 	driver.get(URL+link_carters_5t+"?Nao="+str(24*(j+1)))
+# 	num = 0
+# 	while num < 10:
+# 		sleep(1)
+# 		driver.execute_script("window.scrollTo(0, 1080*"+str(num)+")")
+# 		num = num + 1
+# 	sleep(2)
+# 	page = driver.page_source
+# 	soup = BeautifulSoup(page, "html.parser")
+
+# with open('result_5t.txt', 'w') as f:
+#     for item in product_names:
+#         f.write("%s\n" % item)
+# f.close()
